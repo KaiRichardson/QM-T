@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/kairicha/public_html/bpcs-portal/build
+    - /bin/cp -a * $DEPLOYPATH
