@@ -1,5 +1,6 @@
 const express = require("express");
-const routes = require("./routes");
+require("dotenv").config();
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -15,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 // Import routes and give the server access to them.
 var routes = require("./controllers/postsController.js");
 
-// Add routes, both API and view
+// Add routes
 app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
