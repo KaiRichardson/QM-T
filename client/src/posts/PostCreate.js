@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useMemo } from "react";
+import "./style.css";
 import RichTextInput from "ra-input-rich-text";
 import {
   ArrayInput,
@@ -82,14 +83,25 @@ const PostCreate = ({ permissions, ...props }) => {
         }}
       >
         <TextInput autoFocus source="ticket" />
+        <h4>Message Relevance</h4>
+        <div>
         <RadioButtonGroupInput
-          source="message relevance"
+ n          source="does the agent's response address the user's direct questions and concerns?"
           choices={[
             { id: "yes", name: "Yes" },
             { id: "no", name: "No" },
             { id: "na", name: "N/A" },
           ]}
-        />
+          />
+        <RadioButtonGroupInput
+          source="does the agent's response address the user's direct questions and concerns?"
+          choices={[
+            { id: "yes", name: "Yes" },
+            { id: "no", name: "No" },
+            { id: "na", name: "N/A" },
+          ]}
+          />
+          </div>
         <BooleanInput source="undocumented" defaultValue />
         <RichTextInput source="note" validate={required()} />
         {/* <FormSpy subscription={{ values: true }}>
