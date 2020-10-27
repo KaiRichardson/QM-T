@@ -19,7 +19,6 @@ import {
   Toolbar,
   required,
 } from "react-admin"; // eslint-disable-line import/no-unresolved
-import { FormSpy } from "react-final-form";
 
 const PostCreateToolbar = (props) => (
   <Toolbar {...props}>
